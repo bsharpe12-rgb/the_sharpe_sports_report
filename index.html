@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sharpe Sports Report</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Oswald:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🎙️</span>
+                <span class="logo-text">The Sharpe Sports Report</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#episodes">Episodes</a></li>
+                <li><a href="#community">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">The <span class="text-primary italic glow-text">Huddle</span></h1>
+            <p class="hero-subtitle">The ultimate platform for sports analysis, draft breakdowns, and community debate.</p>
+            <div class="hero-buttons">
+                <a href="https://open.spotify.com/show/1C38PMHjyce0l309J3qRzr" target="_blank" class="btn btn-primary glow-box">Listen on Spotify</a>
+                <a href="#episodes" class="btn btn-outline">View Episodes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Episodes Section -->
+    <section id="episodes" class="episodes-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-tag">On Air Now</h2>
+                    <h3 class="section-title">Latest Episodes</h3>
+                </div>
+                <a href="https://open.spotify.com/show/1C38PMHjyce0l309J3qRzr" target="_blank" class="btn btn-outline">All Episodes</a>
+            </div>
+
+            <div class="episodes-grid">
+                <!-- Episode 1 -->
+                <div class="episode-card">
+                    <div class="ep-meta">
+                        <span class="ep-number">EP 142</span>
+                        <span class="ep-dot"></span>
+                        <span class="ep-duration">5:00</span>
+                    </div>
+                    <h4 class="ep-title">Top 3 RB Sleepers for 2026 NFL Draft</h4>
+                    <a href="https://open.spotify.com/episode/67fyaYMGofaDGg77k105qW" target="_blank" class="btn btn-play glow-box">▶ Listen Now</a>
+                </div>
+
+                <!-- Episode 2 -->
+                <div class="episode-card">
+                    <div class="ep-meta">
+                        <span class="ep-number">EP 141</span>
+                        <span class="ep-dot"></span>
+                        <span class="ep-duration">4:58</span>
+                    </div>
+                    <h4 class="ep-title">NFL Sleeper QB Picks</h4>
+                    <a href="https://open.spotify.com/episode/7AnNy69JgTsQwbTSIOOm8l" target="_blank" class="btn btn-play glow-box">▶ Listen Now</a>
+                </div>
+
+                <!-- Episode 3 -->
+                <div class="episode-card">
+                    <div class="ep-meta">
+                        <span class="ep-number">EP 140</span>
+                        <span class="ep-dot"></span>
+                        <span class="ep-duration">5:03</span>
+                    </div>
+                    <h4 class="ep-title">2026 NFL Draft Top 3 Sleeper Picks</h4>
+                    <a href="https://open.spotify.com/episode/4H6k3OGympWyZSESPRCY8t" target="_blank" class="btn btn-play glow-box">▶ Listen Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community & Forms Section -->
+    <section id="community" class="community-section">
+        <div class="container">
+            
+            <div class="forms-container">
+                <div class="form-header">
+                    <h2 class="section-title">Your Voice Matters</h2>
+                    <p>Got an idea? Want to share the mic? We want to hear it.</p>
+                </div>
+
+                <div class="forms-grid">
+                    <!-- Idea Form -->
+                    <div class="form-card glow-box-static">
+                        <h3 class="form-title">Share An Idea</h3>
+                        <p class="form-desc">Got a hot take? A topic you want us to break down? Send it our way.</p>
+                        
+                        <form action="https://formspree.io/f/mgonrjkl" method="POST">
+                            <div class="input-group">
+                                <label>Name</label>
+                                <input type="text" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Your Idea</label>
+                                <textarea name="message" placeholder="What's your take?" required></textarea>
+                            </div>
+                            <input type="hidden" name="_subject" value="New Idea Submission from TSSR">
+                            <button type="submit" class="btn btn-primary glow-box w-full">Submit Idea</button>
+                        </form>
+                    </div>
+
+                    <!-- Guest Form -->
+                    <div class="form-card glow-box-static">
+                        <h3 class="form-title">Be A Guest</h3>
+                        <p class="form-desc">Think you've got something to contribute? Apply to join us on the huddle.</p>
+                        
+                        <form action="https://formspree.io/f/mgonrjkl" method="POST">
+                            <div class="input-group">
+                                <label>Your Name</label>
+                                <input type="text" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Why You'd Be Great</label>
+                                <textarea name="message" placeholder="Tell us about yourself..." required></textarea>
+                            </div>
+                            <input type="hidden" name="_subject" value="New Guest Application for TSSR">
+                            <button type="submit" class="btn btn-white w-full">Apply Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leaderboard -->
+            <div class="sidebar-grid">
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">⭐ Top Fans</h3>
+                    <p class="sidebar-desc">Engage in the huddle to earn points!</p>
+                    <ul class="leaderboard-list">
+                        <li><span class="rank">#1</span> <strong>DraftNerd</strong> <span class="points">1700 PTS</span></li>
+                        <li><span class="rank">#2</span> <strong>CFBJunkie</strong> <span class="points">1400 PTS</span></li>
+                        <li><span class="rank">#3</span> <strong>BallerAnalyst</strong> <span class="points">1100 PTS</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="logo">
+                <span class="logo-text">The Sharpe Sports Report</span>
+            </div>
+            <p>&copy; 2026 The Sharpe Sports Report. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
