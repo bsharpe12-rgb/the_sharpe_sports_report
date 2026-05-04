@@ -14,22 +14,22 @@
     box-sizing: border-box;
 }
 
-/* ACCESSIBILITY FIX: Increased base font size to 18px per checklist */
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
+    /* DESIGN/UX: Using fluid sizing and 18px base */
     font-size: 18px; 
     line-height: 1.6;
 }
 
-/* ACCESSIBILITY FIX: Ensure keyboard users see where they are */
-a:focus, button:focus {
-    outline: 3px solid var(--primary-blue);
-    outline-offset: 4px;
+/* Keyboard Accessibility */
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 3px solid var(--primary-blue) !important;
+    outline-offset: 3px;
 }
 
-h1, h2, h3, h4, h5, h6, .font-heading {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
 }
@@ -38,102 +38,137 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%; /* Fluid layout */
 }
 
-.text-primary { color: var(--primary-blue); }
-.italic { font-style: italic; }
-.w-full { width: 100%; }
-.text-center { text-align: center; }
-.mt-3 { margin-top: 15px; }
+/* Navigation - 46px Mobile Rule */
+.navbar {
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 100;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    min-height: 46px; /* Accessibility requirement */
+}
+
+.logo-img {
+    width: 40px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    min-height: 46px; /* DESIGN/UX requirement */
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
 
 /* Buttons */
 .btn {
-    display: inline-block;
-    padding: 15px 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    min-height: 46px; /* DESIGN/UX requirement */
     font-family: 'Oswald', sans-serif;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 2px;
     text-decoration: none;
-    cursor: pointer;
     border: none;
-    transition: all 0.3s ease;
-    /* ACCESSIBILITY FIX: Bumped from 14px to 16px */
-    font-size: 16px; 
-}
-
-.btn-primary {
-    background-color: var(--primary-blue);
-    color: white;
-}
-
-/* ACCESSIBILITY FIX: Darkened hover state for better contrast */
-.btn-primary:hover {
-    background-color: #0033cc;
-}
-
-/* Navigation */
-.nav-links a {
-    color: #cbd5e1; /* ACCESSIBILITY FIX: Lighter gray for better contrast ratio */
-    text-decoration: none;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    /* ACCESSIBILITY FIX: Bumped from 14px to 16px */
+    transition: 0.3s;
     font-size: 16px;
-    transition: color 0.3s;
 }
 
-/* Hero Section */
-.hero-subtitle {
-    /* ACCESSIBILITY FIX: Already 20px, keeping as is */
-    font-size: 20px;
-    color: #cbd5e1; /* ACCESSIBILITY FIX: Better contrast */
-    max-width: 600px;
-    margin: 0 auto 40px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
+.btn-primary { background-color: var(--primary-blue); color: white; }
+.btn-outline { border: 2px solid var(--border-color); color: white; }
+.btn-white { background-color: white; color: black; }
+
+/* Fluid Hero and Sections */
+.hero {
+    padding: 80px 20px;
+    text-align: center;
 }
 
-/* Form Elements */
-.input-group label {
-    display: block;
-    color: var(--primary-blue);
-    /* ACCESSIBILITY FIX: Bumped from 10px to 16px for readability */
-    font-size: 16px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 8px;
-}
-
-.form-desc, .sidebar-desc {
-    /* ACCESSIBILITY FIX: Bumped from 12px to 16px */
-    color: rgba(255, 255, 255, 0.8); 
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.hero-bg-img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 12px;
     margin-bottom: 30px;
 }
 
-/* Footer */
-footer p {
-    color: rgba(255, 255, 255, 0.7); /* ACCESSIBILITY FIX: Better contrast */
-    /* ACCESSIBILITY FIX: Bumped from 12px to 16px */
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.hero-title { font-size: clamp(40px, 8vw, 80px); }
+
+/* Grid Layouts */
+.episodes-grid, .forms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
-/* Transcript Link styling for the new HTML */
+.episode-card, .form-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.ep-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
 .transcript-link {
-    text-decoration: underline;
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary-blue);
     font-weight: 600;
-}
-.transcript-link:hover {
-    color: var(--primary-blue) !important;
+    min-height: 46px; /* Hit target */
 }
 
+/* Form Styles */
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #1a1a1a;
+    border: 1px solid var(--border-color);
+    color: white;
+    font-size: 16px;
+}
+
+/* Validation colors */
+input:invalid:not(:placeholder-shown) { border-color: #ff4444; }
+
+.w-full { width: 100%; }
+
+@media (max-width: 768px) {
+    .nav-links { gap: 10px; }
+    .nav-links a { font-size: 14px; }
+}
