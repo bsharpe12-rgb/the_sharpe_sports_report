@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sharpe Sports Report</title>
+    <title>The Sharpe Sports Report | NFL Draft Analysis & Podcast</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,10 +15,11 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <div class="nav-container">
             <div class="logo">
-                <span class="logo-icon">🎙️</span>
+                <!-- UPDATED: Added Logo Image (Requirement: 1 Logo) -->
+                <img src="logo.png" alt="The Sharpe Sports Report Logo" class="logo-img" style="width: 40px; height: auto;">
                 <span class="logo-text">The Sharpe Sports Report</span>
             </div>
             <ul class="nav-links">
@@ -32,6 +33,9 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
+            <!-- UPDATED: Added Image (Requirement: Image 1 of 3) -->
+            <img src="stadium.jpg" alt="Aerial view of a packed football stadium under bright lights" class="hero-bg-img" style="width: 100%; max-width: 600px; margin-bottom: 20px; border-radius: 8px;">
+            
             <h1 class="hero-title">The <span class="text-primary italic glow-text">Huddle</span></h1>
             <p class="hero-subtitle">The ultimate platform for sports analysis, draft breakdowns, and community debate.</p>
             <div class="hero-buttons">
@@ -55,17 +59,25 @@
             <div class="episodes-grid">
                 <!-- Episode 1 -->
                 <div class="episode-card">
+                    <!-- UPDATED: Added Image (Requirement: Image 2 of 3) -->
+                    <img src="runningback.jpg" alt="Running back breaking a tackle during a game" class="ep-img" style="width: 100%; border-radius: 4px; margin-bottom: 10px;">
                     <div class="ep-meta">
                         <span class="ep-number">EP 142</span>
                         <span class="ep-dot"></span>
                         <span class="ep-duration">5:00</span>
                     </div>
                     <h4 class="ep-title">Top 3 RB Sleepers for 2026 NFL Draft</h4>
-                    <a href="https://open.spotify.com/episode/67fyaYMGofaDGg77k105qW" target="_blank" class="btn btn-play glow-box">▶ Listen Now</a>
+                    <div class="ep-actions">
+                        <a href="https://open.spotify.com/episode/67fyaYMGofaDGg77k105qW" target="_blank" class="btn btn-play glow-box">▶ Listen Now</a>
+                        <!-- UPDATED: Added Transcript Link (Requirement: Audio has transcripts) -->
+                        <a href="transcripts/ep142.txt" class="transcript-link" style="display: block; margin-top: 10px; font-size: 14px; color: #fff;">Read Transcript</a>
+                    </div>
                 </div>
 
                 <!-- Episode 2 -->
                 <div class="episode-card">
+                    <!-- UPDATED: Added Image (Requirement: Image 3 of 3) -->
+                    <img src="quarterback.jpg" alt="Quarterback scanning the field for a pass" class="ep-img" style="width: 100%; border-radius: 4px; margin-bottom: 10px;">
                     <div class="ep-meta">
                         <span class="ep-number">EP 141</span>
                         <span class="ep-dot"></span>
@@ -73,6 +85,7 @@
                     </div>
                     <h4 class="ep-title">NFL Sleeper QB Picks</h4>
                     <a href="https://open.spotify.com/episode/7AnNy69JgTsQwbTSIOOm8l" target="_blank" class="btn btn-play glow-box">▶ Listen Now</a>
+                    <a href="transcripts/ep141.txt" class="transcript-link" style="display: block; margin-top: 10px; font-size: 14px; color: #fff;">Read Transcript</a>
                 </div>
 
                 <!-- Episode 3 -->
@@ -84,6 +97,7 @@
                     </div>
                     <h4 class="ep-title">2026 NFL Draft Top 3 Sleeper Picks</h4>
                     <a href="https://open.spotify.com/episode/4H6k3OGympWyZSESPRCY8t" target="_blank" class="btn btn-play glow-box">▶ Listen Now</a>
+                    <a href="transcripts/ep140.txt" class="transcript-link" style="display: block; margin-top: 10px; font-size: 14px; color: #fff;">Read Transcript</a>
                 </div>
             </div>
         </div>
@@ -107,12 +121,13 @@
                         
                         <form action="https://formspree.io/f/mgonrjkl" method="POST">
                             <div class="input-group">
-                                <label>Name</label>
-                                <input type="text" name="name" placeholder="Your name" required>
+                                <!-- UPDATED: Added 'for' attribute to labels for Screen Readers -->
+                                <label for="idea-name">Name</label>
+                                <input type="text" id="idea-name" name="name" placeholder="Your name" required>
                             </div>
                             <div class="input-group">
-                                <label>Your Idea</label>
-                                <textarea name="message" placeholder="What's your take?" required></textarea>
+                                <label for="idea-text">Your Idea</label>
+                                <textarea id="idea-text" name="message" placeholder="What's your take?" required></textarea>
                             </div>
                             <input type="hidden" name="_subject" value="New Idea Submission from TSSR">
                             <button type="submit" class="btn btn-primary glow-box w-full">Submit Idea</button>
@@ -126,12 +141,12 @@
                         
                         <form action="https://formspree.io/f/mgonrjkl" method="POST">
                             <div class="input-group">
-                                <label>Your Name</label>
-                                <input type="text" name="name" placeholder="Your name" required>
+                                <label for="guest-name">Your Name</label>
+                                <input type="text" id="guest-name" name="name" placeholder="Your name" required>
                             </div>
                             <div class="input-group">
-                                <label>Why You'd Be Great</label>
-                                <textarea name="message" placeholder="Tell us about yourself..." required></textarea>
+                                <label for="guest-reason">Why You'd Be Great</label>
+                                <textarea id="guest-reason" name="message" placeholder="Tell us about yourself..." required></textarea>
                             </div>
                             <input type="hidden" name="_subject" value="New Guest Application for TSSR">
                             <button type="submit" class="btn btn-white w-full">Apply Now</button>
@@ -168,3 +183,4 @@
 
 </body>
 </html>
+
