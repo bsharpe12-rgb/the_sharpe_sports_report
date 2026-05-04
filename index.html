@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sharpe Sports Report | NFL Draft Analysis & Podcast</title>
+    <title>The Sharpe Sports Report | NFL Draft Analysis</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://googleapis.com">
@@ -17,10 +17,9 @@
     <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <div class="nav-container">
-            <!-- UPDATED: Logo now links to homepage -->
             <div class="logo">
-                <a href="#home" aria-label="Sharpe Sports Report Home" class="logo-link">
-                    <img src="logo.png" alt="TSSR Logo" class="logo-img">
+                <a href="#home" class="logo-link" aria-label="Sharpe Sports Report Home">
+                    <span class="logo-icon">🎙️</span>
                     <span class="logo-text">The Sharpe Sports Report</span>
                 </a>
             </div>
@@ -35,7 +34,6 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <img src="stadium.jpg" alt="Aerial view of a packed football stadium under bright lights" class="hero-bg-img">
             <h1 class="hero-title">The <span class="text-primary italic glow-text">Huddle</span></h1>
             <p class="hero-subtitle">The ultimate platform for sports analysis, draft breakdowns, and community debate.</p>
             <div class="hero-buttons">
@@ -59,32 +57,26 @@
             <div class="episodes-grid">
                 <!-- Episode 1 -->
                 <div class="episode-card">
-                    <img src="runningback.jpg" alt="Running back breaking a tackle during a game" class="ep-img">
                     <div class="ep-meta">
                         <span class="ep-number">EP 142</span>
                         <span class="ep-dot"></span>
                         <span class="ep-duration">5:00</span>
                     </div>
                     <h4 class="ep-title">Top 3 RB Sleepers for 2026 NFL Draft</h4>
-                    <div class="ep-actions">
-                        <a href="https://spotify.com" target="_blank" class="btn btn-play glow-box">▶ Listen Now</a>
-                        <a href="transcripts/ep142.txt" class="transcript-link">Read Transcript</a>
-                    </div>
+                    <a href="https://spotify.com" target="_blank" class="btn btn-play glow-box">▶ Listen Now</a>
+                    <a href="transcripts/ep142.txt" class="transcript-link" style="display: block; margin-top: 15px; font-size: 14px; color: #94a3b8;">Read Transcript</a>
                 </div>
 
                 <!-- Episode 2 -->
                 <div class="episode-card">
-                    <img src="quarterback.jpg" alt="Quarterback scanning the field for a pass" class="ep-img">
                     <div class="ep-meta">
                         <span class="ep-number">EP 141</span>
                         <span class="ep-dot"></span>
                         <span class="ep-duration">4:58</span>
                     </div>
                     <h4 class="ep-title">NFL Sleeper QB Picks</h4>
-                    <div class="ep-actions">
-                        <a href="https://spotify.com" target="_blank" class="btn btn-play glow-box">▶ Listen Now</a>
-                        <a href="transcripts/ep141.txt" class="transcript-link">Read Transcript</a>
-                    </div>
+                    <a href="https://spotify.com" target="_blank" class="btn btn-play glow-box">▶ Listen Now</a>
+                    <a href="transcripts/ep141.txt" class="transcript-link" style="display: block; margin-top: 15px; font-size: 14px; color: #94a3b8;">Read Transcript</a>
                 </div>
 
                 <!-- Episode 3 -->
@@ -95,10 +87,8 @@
                         <span class="ep-duration">5:03</span>
                     </div>
                     <h4 class="ep-title">2026 NFL Draft Top 3 Sleeper Picks</h4>
-                    <div class="ep-actions">
-                        <a href="https://spotify.com" target="_blank" class="btn btn-play glow-box">▶ Listen Now</a>
-                        <a href="transcripts/ep140.txt" class="transcript-link">Read Transcript</a>
-                    </div>
+                    <a href="https://spotify.com" target="_blank" class="btn btn-play glow-box">▶ Listen Now</a>
+                    <a href="transcripts/ep140.txt" class="transcript-link" style="display: block; margin-top: 15px; font-size: 14px; color: #94a3b8;">Read Transcript</a>
                 </div>
             </div>
         </div>
@@ -112,8 +102,9 @@
                     <h2 class="section-title">Your Voice Matters</h2>
                     <p>Got an idea? Want to share the mic? We want to hear it.</p>
                 </div>
+
                 <div class="forms-grid">
-                    <!-- Idea Form with validation -->
+                    <!-- Idea Form -->
                     <div class="form-card glow-box-static">
                         <h3 class="form-title">Share An Idea</h3>
                         <form action="https://formspree.io" method="POST">
@@ -123,13 +114,13 @@
                             </div>
                             <div class="input-group">
                                 <label for="idea-text">Your Idea</label>
-                                <textarea id="idea-text" name="message" placeholder="What's your take? (Min 10 chars)" required minlength="10"></textarea>
+                                <textarea id="idea-text" name="message" placeholder="What's your take?" required minlength="10"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary glow-box w-full">Submit Idea</button>
                         </form>
                     </div>
 
-                    <!-- Guest Form with validation -->
+                    <!-- Guest Form -->
                     <div class="form-card glow-box-static">
                         <h3 class="form-title">Be A Guest</h3>
                         <form action="https://formspree.io" method="POST">
@@ -155,5 +146,6 @@
             <p>&copy; 2026 The Sharpe Sports Report. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
 </html>
