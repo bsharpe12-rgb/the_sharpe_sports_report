@@ -19,10 +19,10 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
-    font-size: 18px; /* Kept for checklist compliance */
+    font-size: 18px; 
 }
 
-h1, h2, h3, h4, h5, h6, .font-heading {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
 }
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     padding: 0 20px;
 }
 
-/* Glow Effects - RESTORED */
+/* Glow Effects */
 .glow-text {
     text-shadow: 0 0 20px var(--primary-glow);
 }
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     box-shadow: 0 0 15px var(--primary-glow);
 }
 
-/* Buttons - RESTORED STYLING */
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 15px 30px;
@@ -60,14 +60,15 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     border: none;
     transition: all 0.3s ease;
     font-size: 16px;
-    min-height: 46px; /* Essential for mobile checklist */
+    min-height: 46px;
 }
 
 .btn-primary { background-color: var(--primary-blue); color: white; }
 .btn-outline { background-color: transparent; border: 2px solid var(--border-color); color: white; }
 .btn-white { background-color: white; color: black; }
+.btn-play { width: 100%; text-align: center; }
 
-/* Navigation - RESTORED BLUR EFFECT */
+/* Navigation */
 .navbar {
     border-bottom: 1px solid var(--border-color);
     padding: 20px 0;
@@ -79,8 +80,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -121,7 +120,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 .nav-links a:hover, .nav-links a.active { color: var(--primary-blue); }
 
-/* Hero Section - RESTORED GRADIENT & SIZE */
+/* Hero Section */
 .hero {
     padding: 100px 20px;
     text-align: center;
@@ -130,7 +129,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .hero-title {
-    font-size: clamp(50px, 10vw, 80px); /* Fluid size */
+    font-size: clamp(50px, 10vw, 80px);
     font-weight: 900;
     margin-bottom: 20px;
     line-height: 1;
@@ -146,12 +145,16 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     font-weight: 600;
 }
 
-/* Episodes Grid - RESTORED CARD DESIGN */
+/* Episodes Grid */
+.episodes-section { padding: 80px 0; }
+.section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; }
+.section-tag { color: var(--primary-blue); font-size: 14px; letter-spacing: 3px; margin-bottom: 10px; }
+.section-title { font-size: 40px; font-weight: 900; }
+
 .episodes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    margin-top: 40px;
 }
 
 .episode-card {
@@ -163,24 +166,18 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 .episode-card:hover { border-color: var(--primary-blue); }
 
-.ep-img {
-    width: 100%;
-    border-radius: 4px;
-    margin-bottom: 15px;
-}
+.ep-meta { display: flex; align-items: center; gap: 10px; color: var(--primary-blue); font-size: 12px; font-weight: 800; margin-bottom: 15px; }
+.ep-dot { width: 4px; height: 4px; background-color: rgba(255, 255, 255, 0.3); border-radius: 50%; }
+.ep-title { font-size: 24px; font-style: italic; margin-bottom: 25px; }
 
-/* Form Styles - RESTORED SIDE-BY-SIDE */
-.forms-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
-}
+/* Forms */
+.community-section { padding: 80px 0; }
+.form-header { border: 2px solid rgba(0, 68, 255, 0.3); padding: 40px; margin-bottom: 40px; }
+.forms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
+.form-card { background-color: var(--card-bg); padding: 40px; }
 
-.form-card {
-    background-color: var(--card-bg);
-    padding: 40px;
-}
-
+.input-group { margin-bottom: 20px; }
+.input-group label { display: block; color: var(--primary-blue); font-size: 14px; font-weight: 900; margin-bottom: 8px; }
 .input-group input, .input-group textarea {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.05);
@@ -190,8 +187,12 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     outline: none;
 }
 
-/* Keyboard Focus - Essential for Checklist */
+.w-full { width: 100%; }
+
+/* Keyboard Focus */
 a:focus, button:focus {
     outline: 2px solid var(--primary-blue);
     outline-offset: 4px;
 }
+
+footer { padding: 40px 0; text-align: center; border-top: 1px solid var(--border-color); }
