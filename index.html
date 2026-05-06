@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sharpe Sports Report | NFL Draft Analysis</title>
+    <title>Home | The Sharpe Sports Report</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Oswald:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,15 +18,17 @@
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <div class="nav-container">
             <div class="logo">
-                <a href="#home" class="logo-link" aria-label="Sharpe Sports Report Home">
+                <a href="index.html" class="logo-link">
                     <span class="logo-icon">🎙️</span>
                     <span class="logo-text">The Sharpe Sports Report</span>
                 </a>
             </div>
             <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#episodes">Episodes</a></li>
-                <li><a href="#community">Community</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="episodes.html">Episodes</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -37,104 +39,8 @@
             <h1 class="hero-title">The <span class="text-primary italic glow-text">Huddle</span></h1>
             <p class="hero-subtitle">The ultimate platform for sports analysis, draft breakdowns, and community debate.</p>
             <div class="hero-buttons">
-                <!-- Points to your Spotify show link we updated -->
                 <a href="https://spotify.com" target="_blank" class="btn btn-primary glow-box">Listen on Spotify</a>
-                <a href="#episodes" class="btn btn-outline">View Episodes</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Latest Episodes Section -->
-    <section id="episodes" class="episodes-section">
-        <div class="container">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-tag">On Air Now</h2>
-                    <h3 class="section-title">Latest Episodes</h3>
-                </div>
-                <!-- Points to all episodes on Spotify -->
-                <a href="https://open.spotify.com/show/1C38PMHjyce0l309J3qRzr" target="_blank" rel="noopener noreferrer" class="btn btn-outline">All Episodes</a>
-            </div>
-
-            <div class="episodes-grid">
-                <!-- Episode 1 -->
-                <div class="episode-card">
-                    <div class="ep-meta">
-                        <span class="ep-number">EP 142</span>
-                        <span class="ep-dot"></span>
-                        <span class="ep-duration">5:00</span>
-                    </div>
-                    <h4 class="ep-title">Top 3 RB Sleepers for 2026 NFL Draft</h4>
-                    <a href="https://spotify.com" target="_blank" class="btn btn-play glow-box">▶ Listen Now</a>
-                </div>
-
-                <!-- Episode 2 -->
-                <div class="episode-card">
-                    <div class="ep-meta">
-                        <span class="ep-number">EP 141</span>
-                        <span class="ep-dot"></span>
-                        <span class="ep-duration">4:58</span>
-                    </div>
-                    <h4 class="ep-title">NFL Sleeper QB Picks</h4>
-                    <a href="https://spotify.com" target="_blank" class="btn btn-play glow-box">▶ Listen Now</a>
-                </div>
-
-                <!-- Episode 3 -->
-                <div class="episode-card">
-                    <div class="ep-meta">
-                        <span class="ep-number">EP 140</span>
-                        <span class="ep-dot"></span>
-                        <span class="ep-duration">5:03</span>
-                    </div>
-                    <h4 class="ep-title">2026 NFL Draft Top 3 Sleeper Picks</h4>
-                    <a href="https://spotify.com" target="_blank" class="btn btn-play glow-box">▶ Listen Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Community & Forms Section -->
-    <section id="community" class="community-section">
-        <div class="container">
-            <div class="forms-container">
-                <div class="form-header">
-                    <h2 class="section-title">Your Voice Matters</h2>
-                    <p>Got an idea? Want to share the mic? We want to hear it.</p>
-                </div>
-
-                <div class="forms-grid">
-                    <!-- Idea Form -->
-                    <div class="form-card glow-box-static">
-                        <h3 class="form-title">Share An Idea</h3>
-                        <form action="https://formspree.io/f/mgonrjkl" method="POST">
-                            <div class="input-group">
-                                <label for="idea-name">Name</label>
-                                <input type="text" id="idea-name" name="name" placeholder="Your name" required minlength="2">
-                            </div>
-                            <div class="input-group">
-                                <label for="idea-text">Your Idea</label>
-                                <textarea id="idea-text" name="message" placeholder="What's your take?" required minlength="10"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary glow-box w-full">Submit Idea</button>
-                        </form>
-                    </div>
-
-                    <!-- Guest Form -->
-                    <div class="form-card glow-box-static">
-                        <h3 class="form-title">Be A Guest</h3>
-                        <form action="https://formspree.io/f/mgonrjkl" method="POST">
-                            <div class="input-group">
-                                <label for="guest-name">Your Name</label>
-                                <input type="text" id="guest-name" name="name" placeholder="Your name" required minlength="2">
-                            </div>
-                            <div class="input-group">
-                                <label for="guest-reason">Why You'd Be Great</label>
-                                <textarea id="guest-reason" name="message" placeholder="Tell us about yourself..." required minlength="10"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-white w-full">Apply Now</button>
-                        </form>
-                    </div>
-                </div>
+                <a href="episodes.html" class="btn btn-outline">View Episodes</a>
             </div>
         </div>
     </section>
