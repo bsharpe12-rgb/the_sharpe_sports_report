@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community | The Sharpe Sports Report</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-icon">🎙️</span>
+                    <span class="logo-text">The Sharpe Sports Report</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="episodes.html">Episodes</a></li>
+                <li><a href="community.html" class="active">Community</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Community Section -->
+    <section class="community-section" style="padding-top: 120px;">
+        <div class="container">
+            <div class="forms-container">
+                <div class="form-header">
+                    <h2 class="section-title">Your Voice Matters</h2>
+                    <p>Got an idea? Want to share the mic? We want to hear it.</p>
+                </div>
+
+                <div class="forms-grid">
+                    <div class="form-card glow-box-static">
+                        <h3 class="form-title">Share An Idea</h3>
+                        <form action="https://formspree.io" method="POST">
+                            <div class="input-group">
+                                <label for="idea-name">Name</label>
+                                <input type="text" id="idea-name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="idea-text">Your Idea</label>
+                                <textarea id="idea-text" name="message" placeholder="What's your take?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary glow-box w-full">Submit Idea</button>
+                        </form>
+                    </div>
+
+                    <div class="form-card glow-box-static">
+                        <h3 class="form-title">Be A Guest</h3>
+                        <form action="https://formspree.io" method="POST">
+                            <div class="input-group">
+                                <label for="guest-name">Your Name</label>
+                                <input type="text" id="guest-name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="guest-reason">Why You'd Be Great</label>
+                                <textarea id="guest-reason" name="message" placeholder="Tell us about yourself..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-white w-full">Apply Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 The Sharpe Sports Report. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
